@@ -88,7 +88,25 @@
 
 **Диаграмма компонентов (Components)**
 
-Добавьте диаграмму для каждого из выделенных микросервисов.
+```markdown
+[Диаграмма компонентов Auth](https://disk.yandex.ru/d/cC-Lh4AgEqQuPg)
+```
+
+```markdown
+[Диаграмма компонентов Device](https://disk.yandex.ru/d/Nz-Yr8hgpaQA0A)
+```
+
+```markdown
+[Диаграмма компонентов Heating](https://disk.yandex.ru/d/DHdaE16cL0WQ-Q)
+```
+
+```markdown
+[Диаграмма компонентов Monitoring](https://disk.yandex.ru/d/kYHQOUaWrlr9Yw)
+```
+
+```markdown
+[Диаграмма компонентов User](https://disk.yandex.ru/d/KjJw33PXDZ3KTw)
+```
 
 **Диаграмма кода (Code)**
 
