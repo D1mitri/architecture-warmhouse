@@ -140,10 +140,20 @@
 # Задание 5. Работа с docker и docker-compose
 
 Примеры GET запросов для получения рандомного значения температуры:
-http://0.0.0.0:8081/temperature?location=Bedroom
-http://0.0.0.0:8081/temperature?location=Kitchen
-http://0.0.0.0:8081/temperature?location=Living_Room
+
+```markdown
+[Bedroom](http://0.0.0.0:8081/temperature?location=Bedroom)
+```
+
+```markdown
+[Kitchen](http://0.0.0.0:8081/temperature?location=Kitchen)
+```
+
+```markdown
+[Living_Room](http://0.0.0.0:8081/temperature?location=Living_Room)
+```
 
 Пример успешного ответа:
-{"location":"Living_Room","sensorId":"1","temperature":21.6,"unit":"C"}
 
+```json
+{"location":"Living_Room","sensorId":"1","temperature":21.6,"unit":"C"}
