@@ -6,29 +6,28 @@ from typing import Dict
 app = FastAPI()
 
 ROOM_SENSORS = {
-    "Living_Room": "1",
-    "Bedroom": "2",
-    "Kitchen": "3",
-    "Unknown": "0"
+    "1": "Living_Room",
+    "2": "Bedroom",
+    "3": "Kitchen",
+    "0": "Unknown"
 }
 
 class TemperatureResponse(BaseModel):
     location: str
     sensorId: str
-    temperature: float
+    value: float
     unit: str = "C"
 
-@app.get("/temperature")
-async def get_temperature(
-    location: str = Query(..., description="Name of room", example="Kitchen")
-) -> TemperatureResponse:
+@app.get("/temperature/{sensor_id}")
+async def get_temperature(sensor_id: str) -> TemperatureResponse:
     """Return random temperature for room"""
-    if location not in ROOM_SENSORS:
+
+    if sensor_id not in ROOM_SENSORS:
         return {"error": "Room not found"}, 404
 
     return {
-        "location": location,
-        "sensorId": ROOM_SENSORS[location],
-        "temperature": round(random.uniform(17.0, 25.0), 1),
+        "location": ROOM_SENSORS[sensor_id],
+        "sensorId": sensor_id,
+        "value": round(random.uniform(17.0, 25.0), 1),
         "unit": "C"
     }

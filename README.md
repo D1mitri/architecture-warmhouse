@@ -142,18 +142,18 @@
 Примеры GET запросов для получения рандомного значения температуры:
 
 ```markdown
-[Bedroom](http://0.0.0.0:8081/temperature?location=Bedroom)
+[Living_Room](http://0.0.0.0:8081/temperature/1)
 ```
 
 ```markdown
-[Kitchen](http://0.0.0.0:8081/temperature?location=Kitchen)
+[Bedroom](http://0.0.0.0:8081/temperature/2)
 ```
 
 ```markdown
-[Living_Room](http://0.0.0.0:8081/temperature?location=Living_Room)
+[Kitchen](http://0.0.0.0:8081/temperature/3)
 ```
 
 Пример успешного ответа:
 
 ```json
-{"location":"Living_Room","sensorId":"1","temperature":21.6,"unit":"C"}
+{"location":"Living_Room","sensorId":"1","value":18.2,"unit":"C"}
